@@ -1,0 +1,12 @@
+.btn-select {
+    border: none;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    background: var(--colorDark);
+    color: var(--light1);
+    cursor: pointer;
+    &:hover {
+        background: var(--colorMain);
+        
+    }
+}

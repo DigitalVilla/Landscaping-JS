@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- //Design by Omar Villanueva 2018-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <title>AltaVista</title>
+</head>
+
+<body>
+    <section>
+        <header class="header">
+            <div class="header_container">
+
+                <img class="logo" src="img/logoW.png" alt="logo">
+
+                <form action="#" class="search">
+                    <input type="text" class="search_input" placeholder="Find a Location Near You">
+                    <svg class="search_icon">
+                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </form>
+                <div class="nav-btn">
+                    <div class="nav-btn_icon-box">
+                        <svg class='nav-btn_icon'>
+                            <use xlink:href='img/sprite.svg#icon-home'></use>
+                        </svg>
+                    </div>
+                    <div class="nav-btn_icon-box current">
+                        <svg class='nav-btn_icon'>
+                            <use xlink:href='img/sprite.svg#icon-ruler'></use>
+                        </svg>
+                    </div>
+                    <div class="nav-btn_icon-box">
+                        <svg class='nav-btn_icon'>
+                            <use xlink:href='img/sprite.svg#icon-office'></use>
+                        </svg>
+                    </div>
+                    <div class="nav-btn_icon-box">
+                        <svg class='nav-btn_icon'>
+                            <use xlink:href='img/sprite.svg#icon-chat'></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="planter-app" class="container">
+            <div class="content">
+                <!-- SLIDER  -->
+                <div class="menu-view">
+                    <div class="menu-view_display slider">
+                        <div id="image-A">
+                        </div>
+                        <div id="image-B">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar">
+                    <form action="get" class="side-nav_prices">
+                        <div class="side-nav_title">
+                            <svg class='side-nav_title_icon'>
+                                <use xlink:href='img/sprite.svg#icon-ruler'></use>
+                            </svg>
+                            <span>Your Planter</span>
+                        </div>
+                        <div class="side-nav_prices-radio">
+                            <input class="rdBtn" id="square" type="radio" name="type" required value="square" onclick="proCheck();" />
+                            <label for="square">
+                                <span class="side-nav_prices-radio-btn"></span> Square</label>
+                            <input class="rdBtn" id="cylinder" type="radio" name="type" required value="cylinder" onclick="proCheck();" />
+                            <label for="cylinder">
+                                <span class="side-nav_prices-radio-btn"></span> Cylinder</label>
+                            <input class="rdBtn" id="sphere" type="radio" name="type" required value="sphere" onclick="proCheck();" />
+                            <label for="sphere">
+                                <span class="side-nav_prices-radio-btn"></span>1/2 Sphere</label>
+                            <input class="rdBtn" id="cone" type="radio" name="type" required value="cone" onclick="proCheck();" />
+                            <label for="cone">
+                                <span class="side-nav_prices-radio-btn"></span>Cone</label>
+                        </div>
+
+                        <!-- //Individual -->
+                        <div class="myShapes">
+                            <div class="myShapes_image"></div>
+                            <input type="number" name="size" placeholder="Length" step="any" min="1" />
+                            <input type="number" name="size" placeholder="Width" step="any" min="1" />
+                            <input type="number" name="size" placeholder="Height" step="any" min="1" />
+                        </div>
+                    </form>
+
+                    <div class="finalOrder">
+                        <button class="side-nav_title" onclick="addItem();">
+                            <svg class='side-nav_title_icon'>
+                                <use xlink:href='img/sprite.svg#icon-text'></use>
+                            </svg>
+                            <span>Add Item</span>
+                        </button>
+
+                        <div id="ordersPS" class="side-nav_order">
+                            <ul class="side-nav_order_list">
+                            </ul>
+                        </div>
+
+                        <h2 class="side-nav_total">Total:
+                            <span id="total-price">$00.00</span>
+                        </h2>
+                        <div class="checkout-btn">
+                            <a class="checkout-btn_link" href="#popup">
+                                <svg class='checkout-btn_icon'>
+                                    <use xlink:href='img/sprite.svg#icon-dollar'></use>
+                                </svg>
+                                <span class="checkout-btn_text">Check Out</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup">
+            <div class="checkout">
+                <div class="checkout-head">
+                    <img src="img/logoW.png" alt="logo">
+                    <h2>AltaVista</h2>
+                </div>
+                <form method="get" action="mailto:registration@sait.net">
+                    <input type="text" class="text" placeholder="Full Name" pattern="[A-Za-z]{1,}" title="No digits" required>
+                    <input type="text" class="text" required placeholder="Phone Number" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="000-000-0000">
+                    <input type="text" class="text" placeholder="Address"  title="" required>
+                    <input type="text" class="text" required placeholder="Credit Card" pattern="\d{4}[\-]\d{4}[\-]\d{4}[\-]\d{4}" title="0000-0000-0000-0000">
+                    <input type="date" class="text" required>
+                    <input type="text" class="text" required placeholder="CPV" pattern="\d{3}" title="000">
+                    <input type="email" class="text" placeholder="your@email.com " required>
+                    <button class="checkout-btn">
+                        Check Out
+                    </button>
+                    <a href="#planter-app" class="clear-btn">
+                        Cancel
+                    </a>
+                </form>
+            </div>
+            <div class="background">
+                &nbsp;
+            </div>
+        </div>
+
+    </section>
+    
+    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

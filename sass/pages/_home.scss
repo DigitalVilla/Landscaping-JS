@@ -1,0 +1,9 @@
+section {
+    // background-image: linear-gradient(to bottom left, var(--colorLightA), var(--colorDarkA)), url(../img/wood.jpg) ;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100Vh;
+    width: 100vw;
+    background: var(--light4);
+}
