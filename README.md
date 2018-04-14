@@ -1,5 +1,6 @@
-# A WebApp Landcaping site
-### A functional Mock-up design
-NO Jquery!
+# Altura Landscaping
+### A functional planter ordering system
+### Technologies
+JavaScript, SASS, HTML, SVG, CSS-Animations.
 #### Main Screen
 ![Screenshot](screenshot.png) 
