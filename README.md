@@ -3,4 +3,4 @@
 ### Technologies
 JavaScript, SASS, HTML, SVG, CSS-Animations.
 #### Main Screen
-![Screenshot](screenshot.png) 
+![Screenshot](screenshotr.png) 
